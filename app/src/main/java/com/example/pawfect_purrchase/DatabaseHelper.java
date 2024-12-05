@@ -12,7 +12,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String TABLE_NAME = "petFood_table";
 
-    public DatabaseHelper(@Nullable Context context, @Nullable String name) {
+    public DatabaseHelper(@Nullable Context context) {
         super(context, "food.db", null, 1);
     }
 
