@@ -7,8 +7,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+
+    private static final String TABLE_NAME = "petFood_Table";
+
+    public DatabaseHelper(@Nullable Context context, @Nullable String name) {
+        super(context, name, null, 1);
     }
 
     @Override
