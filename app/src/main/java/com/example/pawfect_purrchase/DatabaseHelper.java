@@ -34,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(int image, String name, String price, String description){
+    public boolean insertDataFood(int image, String name, String price, String description){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
