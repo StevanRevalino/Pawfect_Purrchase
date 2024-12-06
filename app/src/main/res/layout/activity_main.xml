@@ -9,15 +9,121 @@
     android:orientation="vertical"
     android:background="#FFEFD9">
 
-    <Button
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Hello, "
+          android:textSize="30dp"
+          android:layout_marginTop="40dp"
+          android:layout_marginLeft="30dp"
+          android:fontFamily="sans-serif-black"/>
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:srcCompat="@drawable/user_profile"
+          android:layout_marginTop="25dp"
+          android:layout_marginLeft="200dp"/>
+    </LinearLayout>
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hi"/>
+        app:srcCompat="@drawable/big_banner"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="20dp"/>
 
-    <ListView
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:divider="@color/black"
-        android:dividerHeight="1dp"
-        android:id="@+id/listViewData"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:text="Save 20% on your purchase!"
+        android:textColor="#FF0000"
+        android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/equipmentbutton"
+                android:layout_marginTop="30dp"
+                android:id="@+id/btnEquipment"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/foodbutton"
+                android:layout_marginTop="30dp"
+                android:id="@+id/btnFood"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+      <FrameLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="left">
+      </FrameLayout>
+        <ImageView
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/toysbutton"
+            android:id="@+id/btnToys"/>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="423dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:srcCompat="@drawable/weird_blob"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/houseselected_button" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="90dp"
+                app:srcCompat="@drawable/shop_button"
+                android:id="@+id/btnHomeShop"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="90dp"
+                app:srcCompat="@drawable/profile_button"
+                android:id="@+id/btnHomeProfile"/>
+        </LinearLayout>
+
+
+    </FrameLayout>
 </LinearLayout>
