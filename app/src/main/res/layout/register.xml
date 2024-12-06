@@ -8,12 +8,13 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="98dp"
             app:srcCompat="@drawable/pawprints" />
+
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/pawfectpurrchase"/>
+            android:layout_height="138dp"
+            app:srcCompat="@drawable/pawfectpurrchase" />
 
         <EditText
             android:layout_width="match_parent"
@@ -74,11 +75,14 @@
         </LinearLayout>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register Account"
             android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
             android:layout_gravity="center"
-            />
+            android:text="Register Account" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/dog_and_cat_and_house" />
 </LinearLayout>
