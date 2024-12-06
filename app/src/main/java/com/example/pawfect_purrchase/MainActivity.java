@@ -1,6 +1,10 @@
 package com.example.pawfect_purrchase;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,7 +19,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     List<PetFoodModel> petFoodList;
     ListView listdata;
+    Button btnMap;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
         petFoodList.add(food3);
         petFoodList.add(food4);
         petFoodList.add(food5);
+
+        btnMap = findViewById(R.id.btnMaps);
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StoreLocation.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
