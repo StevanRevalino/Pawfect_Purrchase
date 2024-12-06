@@ -27,7 +27,7 @@
             android:id="@+id/edtUsername"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Username..." />
+            android:hint="Email..." />
 
         <EditText
             android:id="@+id/edtPassword"
@@ -38,7 +38,7 @@
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="226dp"
-            android:layout_height="41dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="Log in" />
 
