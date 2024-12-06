@@ -13,16 +13,16 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LoginActivity extends AppCompatActivity {
 
     DatabaseHelper dbHelper;
-    EditText edtUsername, edtPassword;
-    Button btnLogin;
+    EditText edtLoginEmail, edtLoginPassword;
+    Button btnLogin,btnRegisterFromLogin;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        edtUsername = findViewById(R.id.edtUsername);
-        edtPassword = findViewById(R.id.edtPassword);
+        edtLoginEmail = findViewById(R.id.edtLoginEmail);
+        edtLoginPassword = findViewById(R.id.edtLoginPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
         dbHelper = new DatabaseHelper(this);
@@ -30,15 +30,15 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = edtUsername.getText().toString().trim();
-                String password = edtPassword.getText().toString().trim();
+                String email = edtLoginEmail.getText().toString().trim();
+                String password = edtLoginPassword.getText().toString().trim();
 
-                if(username.isEmpty() || password.isEmpty()){
-                    Toast.makeText(LoginActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                if(email.isEmpty() || password.isEmpty()){
+                    Toast.makeText(LoginActivity.this, "Please fill in all fields!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (dbHelper.checkEmail(username)) {
+                if (dbHelper.checkEmailPassword(email, password)) {
                     // Login berhasil
                     Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -48,6 +48,17 @@ public class LoginActivity extends AppCompatActivity {
                     // Login gagal
                     Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                 }
+
+
+            }
+        });
+
+        btnRegisterFromLogin = findViewById(R.id.btnRegisterFromLogin);
+        btnRegisterFromLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -24,13 +24,13 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/edtUsername"
+            android:id="@+id/edtLoginEmail"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:hint="Email..." />
 
         <EditText
-            android:id="@+id/edtPassword"
+            android:id="@+id/edtLoginPassword"
             android:layout_width="match_parent"
             android:layout_height="59dp"
             android:hint="Password..." />
@@ -40,7 +40,15 @@
             android:layout_width="226dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="Log in" />
+            android:text="Log in" />
+
+        <Button
+            android:id="@+id/btnRegisterFromLogin"
+            android:layout_width="226dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Register" />
+
 
     </LinearLayout>
 </LinearLayout>
