@@ -19,13 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:hint="Email..."
-            android:id="@+id/edtEmail"/>
+            android:id="@+id/edtRegistEmail"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:hint="Password..."
-            android:id="@+id/edtPassword"/>
+            android:id="@+id/edtRegistPassword"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="64dp"
@@ -35,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:text="Register Account"
+            android:id="@+id/btnRegister"
             />
 
 </LinearLayout>
