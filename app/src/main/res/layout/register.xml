@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFEFD9">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/pawprints" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/pawfectpurrchase"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:hint="Email..."
+            android:id="@+id/edtEmail"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:hint="Password..."
+            android:id="@+id/edtPassword"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:hint="Confirm Password..."
+            android:id="@+id/edtConfirmPassword"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="Register Account"
+            />
+
+</LinearLayout>
