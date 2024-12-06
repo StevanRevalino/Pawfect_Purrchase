@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
-    DatabaseHelperAccount dbHelperAccount;
+    DatabaseHelper dbHelper;
     EditText edtUsername, edtPassword;
     Button btnLogin;
 
@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
-        dbHelperAccount = new DatabaseHelperAccount(this);
+        dbHelper = new DatabaseHelper(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (dbHelperAccount.checkEmail(username)) {
+                if (dbHelper.checkEmail(username)) {
                     // Login berhasil
                     Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
