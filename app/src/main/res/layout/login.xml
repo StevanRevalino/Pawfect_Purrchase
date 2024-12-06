@@ -27,13 +27,35 @@
             android:id="@+id/edtLoginEmail"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Email..." />
+            android:hint="Email..."
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
 
-        <EditText
-            android:id="@+id/edtLoginPassword"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:hint="Password..." />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtLoginPassword"
+                android:layout_width="292dp"
+                android:layout_height="59dp"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:hint="Password..."
+                android:inputType="textPassword" />
+
+            <!-- Tombol Toggle Visibilitas Password -->
+            <ImageView
+                android:id="@+id/btnTogglePassword"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/show"
+                android:contentDescription="Toggle Password Visibility"
+                android:padding="10dp" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnLogin"

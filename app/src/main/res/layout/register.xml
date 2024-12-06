@@ -19,23 +19,30 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:hint="Email..."
-            android:id="@+id/edtRegistEmail"/>
+            android:id="@+id/edtRegistEmail"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:hint="Password..."
-            android:id="@+id/edtRegistPassword"/>
+            android:id="@+id/edtRegistPassword"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:hint="Confirm Password..."
-            android:id="@+id/edtConfirmPassword"/>
+            android:id="@+id/edtConfirmPassword"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Register Account"
             android:id="@+id/btnRegister"
+            android:layout_gravity="center"
             />
 
 </LinearLayout>
