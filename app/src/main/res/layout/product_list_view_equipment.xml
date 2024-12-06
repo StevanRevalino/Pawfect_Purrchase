@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Equipment's Product"
+        android:text="Equipment's Products"
         android:textAlignment="center"
         android:textColor="#994E20"
         android:textSize="28dp"

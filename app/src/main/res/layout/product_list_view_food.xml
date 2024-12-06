@@ -10,7 +10,7 @@
         android:id="@+id/titleFoodProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Food's Product"
+        android:text="Food's Products"
         android:textAlignment="center"
         android:textColor="#994E20"
         android:textSize="28dp"
