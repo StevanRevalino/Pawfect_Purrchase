@@ -2,9 +2,11 @@ package com.example.pawfect_purrchase;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -19,6 +21,9 @@ public class RegisterActivity extends AppCompatActivity {
     EditText edtRegistEmail, edtRegistPassword, edtRegistConfirmPassword;
     Button btnRegister;
 
+    boolean isPasswordVisible = false;
+    boolean isConfirmPasswordVisible = false;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +34,8 @@ public class RegisterActivity extends AppCompatActivity {
         edtRegistEmail = findViewById(R.id.edtRegistEmail);
         edtRegistPassword = findViewById(R.id.edtRegistPassword);
         edtRegistConfirmPassword = findViewById(R.id.edtConfirmPassword);
+        ImageView btnTogglePasswordRegister = findViewById(R.id.btnTogglePasswordRegister);
+        ImageView btnToggleConfirmPassword = findViewById(R.id.btnToggleConfirmPassword);
 
         btnRegister = findViewById(R.id.btnRegister);
 
@@ -67,6 +74,32 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 }
             }
+        });
+
+        // Toggle Password Visibility
+        btnTogglePasswordRegister.setOnClickListener(v -> {
+            if (isPasswordVisible) {
+                edtRegistPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                btnTogglePasswordRegister.setImageResource(R.drawable.hide); // Ganti ke ikon "hide"
+            } else {
+                edtRegistPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                btnTogglePasswordRegister.setImageResource(R.drawable.show); // Ganti ke ikon "show"
+            }
+            isPasswordVisible = !isPasswordVisible;
+            edtRegistPassword.setSelection(edtRegistPassword.length());
+        });
+
+        // Toggle Confirm Password Visibility
+        btnToggleConfirmPassword.setOnClickListener(v -> {
+            if (isConfirmPasswordVisible) {
+                edtRegistConfirmPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                btnToggleConfirmPassword.setImageResource(R.drawable.hide); // Ganti ke ikon "hide"
+            } else {
+                edtRegistConfirmPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                btnToggleConfirmPassword.setImageResource(R.drawable.show); // Ganti ke ikon "show"
+            }
+            isConfirmPasswordVisible = !isConfirmPasswordVisible;
+            edtRegistConfirmPassword.setSelection(edtRegistConfirmPassword.length());
         });
     }
 
