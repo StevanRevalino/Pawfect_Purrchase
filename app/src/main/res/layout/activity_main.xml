@@ -55,34 +55,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/equipmentbutton"
-                android:layout_marginTop="30dp"
                 android:id="@+id/btnEquipment"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/foodbutton"
-                android:layout_marginTop="30dp"
                 android:id="@+id/btnFood"/>
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="148dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
-      <FrameLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="left">
-      </FrameLayout>
-        <ImageView
-            android:layout_width="148dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/toysbutton"
-            android:id="@+id/btnToys"/>
-    </LinearLayout>
-
+        app:srcCompat="@drawable/toysbutton"
+        android:id="@+id/btnToys"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/store_location_button"
+        android:layout_gravity="center"
+        android:id="@+id/imgStoreLocation"
+        android:clickable="true"/>
 
     <FrameLayout
         android:layout_width="423dp"
@@ -124,12 +117,11 @@
                 android:id="@+id/btnHomeProfile"/>
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnMaps"
-            android:layout_gravity="center|top"
-            android:text="OUR STORE"/>
-
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/btnMaps"-->
+<!--            android:layout_gravity="center|top"-->
+<!--            android:text="OUR STORE"/>-->
     </FrameLayout>
 </LinearLayout>
