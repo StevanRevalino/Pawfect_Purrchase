@@ -31,7 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".EquipmentList"/>
+        <activity android:name=".FoodList"/>
+        <activity android:name=".ToysList"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAzpcxA7jJkqwbVpXKAcb559P2Ygw3yT2E"/>
