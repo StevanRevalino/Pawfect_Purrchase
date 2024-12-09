@@ -1,12 +1,12 @@
 package com.example.pawfect_purrchase;
 
-public class PetFoodModel {
+public class ProductModel {
     private int image;
     private String name;
     private String price;
     private String description;
 
-    public PetFoodModel(int image, String name, String price, String description) {
+    public ProductModel(int image, String name, String price, String description) {
         this.image = image;
         this.name = name;
         this.price = price;
