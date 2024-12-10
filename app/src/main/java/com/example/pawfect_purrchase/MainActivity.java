@@ -18,11 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    List<PetFoodModel> petFoodList;
-    ListView listdata;
-    ImageView imgMap;
+    Button btnMap;
 
-    @SuppressLint("MissingInflatedId")
+    ImageView equipmentBtn, foodBtn, toysBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,24 +33,44 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        DatabaseHelper databaseHelper = new DatabaseHelper(getApplicationContext());
+        equipmentBtn = findViewById(R.id.btnEquipment);
+        foodBtn = findViewById(R.id.btnFood);
+        toysBtn = findViewById(R.id.btnToys);
 
-        petFoodList = new ArrayList<>();
+        equipmentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EquipmentList.class);
+                startActivity(intent);
+            }
+        });
 
-        PetFoodModel food1 = new PetFoodModel(R.layout.activity_main,"kacang","Rp 2302032", "makanan gokil");
-        PetFoodModel food2 = new PetFoodModel(R.layout.activity_main,"kacang","Rp 2302032", "makanan gokil");
-        PetFoodModel food3 = new PetFoodModel(R.layout.activity_main,"kacang","Rp 2302032", "makanan gokil");
-        PetFoodModel food4 = new PetFoodModel(R.layout.activity_main,"kacang","Rp 2302032", "makanan gokil");
-        PetFoodModel food5 = new PetFoodModel(R.layout.activity_main,"kacang","Rp 2302032", "makanan gokil");
+        foodBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FoodList.class);
+                startActivity(intent);
+            }
+        });
 
-        petFoodList.add(food1);
-        petFoodList.add(food2);
-        petFoodList.add(food3);
-        petFoodList.add(food4);
-        petFoodList.add(food5);
+        toysBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ToysList.class);
+                startActivity(intent);
+            }
+        });
 
-        imgMap = findViewById(R.id.imgStoreLocation);
-        imgMap.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+
+
+
+        btnMap = findViewById(R.id.btnMaps);
+        btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, StoreLocation.class);
