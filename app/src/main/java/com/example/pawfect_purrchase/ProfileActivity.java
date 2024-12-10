@@ -44,7 +44,7 @@ public class ProfileActivity extends AppCompatActivity {
         if (email != null) {
             // Pisahkan nama dari email
             String name = email.split("@")[0];
-            // Tampilkan nama di TextView
+            // Tampilkan nama di TextViews
             emptyText.setText(name);
         }
     }
