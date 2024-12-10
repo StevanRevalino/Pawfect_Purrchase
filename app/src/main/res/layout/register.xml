@@ -13,7 +13,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="138dp"
+            android:layout_height="wrap_content"
             app:srcCompat="@drawable/pawfectpurrchase" />
 
         <EditText
@@ -76,13 +76,14 @@
 
         <Button
             android:id="@+id/btnRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="67dp"
+            android:layout_width="193dp"
+            android:layout_height="61dp"
             android:layout_gravity="center"
             android:text="Register Account" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
             app:srcCompat="@drawable/dog_and_cat_and_house" />
 </LinearLayout>
