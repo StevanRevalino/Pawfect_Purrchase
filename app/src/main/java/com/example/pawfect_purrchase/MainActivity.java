@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnMap;
 
     ImageView equipmentBtn, foodBtn, toysBtn;
+    ImageView userProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        userProfile = findViewById(R.id.imageUserProfile);
+        userProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                intent.putExtra("userEmail", getIntent().getStringExtra("userEmail")); // Teruskan email
+                startActivity(intent);
+            }
+        });
 
 
 
