@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnMap;
 
     ImageView equipmentBtn, foodBtn, toysBtn;
+    ImageView homeInfo;
     ImageView userProfile;
 
     @Override
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         equipmentBtn = findViewById(R.id.btnEquipment);
         foodBtn = findViewById(R.id.btnFood);
         toysBtn = findViewById(R.id.btnToys);
+        homeInfo = findViewById(R.id.btnHomeInfo);
 
         equipmentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,12 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
 
         btnMap = findViewById(R.id.btnMaps);
         btnMap.setOnClickListener(new View.OnClickListener() {
