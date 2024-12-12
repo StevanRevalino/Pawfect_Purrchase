@@ -61,7 +61,7 @@
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="226dp"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:layout_gravity="center"
             android:text="Log in"
             android:backgroundTint="#C97D01"
@@ -70,7 +70,7 @@
         <Button
             android:id="@+id/btnRegisterFromLogin"
             android:layout_width="226dp"
-            android:layout_height="wrap_content"
+            android:layout_height="61dp"
             android:layout_gravity="center"
             android:text="Register"
             android:backgroundTint="#C97D01"
@@ -79,8 +79,9 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/dog_and_cat_and_house"/>
-
+            app:srcCompat="@drawable/dog_and_cat_and_house"
+            android:layout_marginTop="135dp"
+            />
 
     </LinearLayout>
 </LinearLayout>

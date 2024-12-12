@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnMap;
 
     ImageView equipmentBtn, foodBtn, toysBtn;
+    ImageView homeInfo;
     ImageView userProfile;
 
     @Override
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         equipmentBtn = findViewById(R.id.btnEquipment);
         foodBtn = findViewById(R.id.btnFood);
         toysBtn = findViewById(R.id.btnToys);
+        homeInfo = findViewById(R.id.btnHomeInfo);
 
         equipmentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,17 +74,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-        btnMap = findViewById(R.id.btnMaps);
-        btnMap.setOnClickListener(new View.OnClickListener() {
+        homeInfo = findViewById(R.id.btnHomeInfo);
+        homeInfo.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, StoreLocation.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AboutUsActivity.class);
                 startActivity(intent);
             }
         });

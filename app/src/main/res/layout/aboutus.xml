@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFEFD9">
+
+    <ImageView
+        android:layout_width="139dp"
+        android:layout_height="205dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/infobutton" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About us"
+        android:textSize="22dp"
+        android:fontFamily="sans-serif-black"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="386dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:text="At Pawfect Purrchase, we believe every pet deserves the best. From nutritious food to fun toys and comfy accessories, we’re here to make shopping for your furry friends easy and enjoyable. Your pet’s happiness is our priority—because they’re family too!"
+        android:textAlignment="center"
+        android:textSize="18dp" />
+
+    <!--    Logout sm graphics-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="78dp"
+            android:layout_height="129dp"
+            app:srcCompat="@drawable/pawprint_right_top" />
+
+        <ImageView
+            android:id="@+id/btnStoreLocation"
+            android:layout_width="254dp"
+            android:layout_height="129dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/store_location_button" />
+        <ImageView
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/pawprint_left_top" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/id_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="331dp"
+        android:layout_height="219dp"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:layout_width="423dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:srcCompat="@drawable/weird_blob"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/homepage"
+                android:id="@+id/btnHomeFromAboutUs"/>
+
+            <ImageView
+                android:id="@+id/btnInfoShop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="90dp"
+                app:srcCompat="@drawable/shop_button" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="90dp"
+                app:srcCompat="@drawable/infobuttonselected"
+                android:id="@+id/btnInfoInfo"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -117,22 +117,13 @@
                 android:id="@+id/btnHomeShop"/>
 
             <ImageView
+                android:id="@+id/btnHomeInfo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="71dp"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="90dp"
-                app:srcCompat="@drawable/profile_button"
-                android:id="@+id/btnHomeProfile"/>
+                app:srcCompat="@drawable/infobutton" />
         </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnMaps"
-            android:layout_gravity="center|top"
-            android:text="OUR STORE"
-            android:backgroundTint="#994E20"
-            android:textColor="#FFEFD9"/>
 
     </FrameLayout>
 </LinearLayout>
