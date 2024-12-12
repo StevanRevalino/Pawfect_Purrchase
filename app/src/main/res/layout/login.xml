@@ -63,14 +63,18 @@
             android:layout_width="226dp"
             android:layout_height="64dp"
             android:layout_gravity="center"
-            android:text="Log in" />
+            android:text="Log in"
+            android:backgroundTint="#C97D01"
+            android:textColor="#FFEFD9"/>
 
         <Button
             android:id="@+id/btnRegisterFromLogin"
             android:layout_width="226dp"
             android:layout_height="61dp"
             android:layout_gravity="center"
-            android:text="Register" />
+            android:text="Register"
+            android:backgroundTint="#C97D01"
+            android:textColor="#FFEFD9"/>
 
         <ImageView
             android:layout_width="match_parent"
