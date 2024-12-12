@@ -23,7 +23,7 @@
         android:id="@+id/listViewToysProduct"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:divider="@color/black"
+        android:divider="#994E20"
         android:dividerHeight="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
