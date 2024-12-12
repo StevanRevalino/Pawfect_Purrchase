@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                     // Login berhasil
                     Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("userEmail", email); // Kirim email ke MainActivity
                     startActivity(intent);
                     finish();
                 } else {
@@ -83,5 +84,7 @@ public class LoginActivity extends AppCompatActivity {
                 edtLoginPassword.setSelection(edtLoginPassword.length());  // Keep cursor at the end
             }
         });
+
+
     }
 }
