@@ -117,12 +117,12 @@
                 android:id="@+id/btnHomeShop"/>
 
             <ImageView
+                android:id="@+id/btnHomeInfo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="71dp"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="90dp"
-                app:srcCompat="@drawable/profile_button"
-                android:id="@+id/btnHomeProfile"/>
+                app:srcCompat="@drawable/infobutton" />
         </LinearLayout>
 
         <Button
