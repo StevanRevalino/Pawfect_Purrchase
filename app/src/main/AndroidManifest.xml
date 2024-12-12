@@ -18,15 +18,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pawfect_Purrchase"
         tools:targetApi="31">
-        <activity
-            android:name=".forDetailproducts"
-            android:exported="false" />
+
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".StoreLocation" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".AboutUsActivity"/>
         <activity
             android:name=".LoginActivity"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

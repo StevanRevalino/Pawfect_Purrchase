@@ -125,14 +125,5 @@
                 app:srcCompat="@drawable/infobutton" />
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnMaps"
-            android:layout_gravity="center|top"
-            android:text="OUR STORE"
-            android:backgroundTint="#994E20"
-            android:textColor="#FFEFD9"/>
-
     </FrameLayout>
 </LinearLayout>
