@@ -58,7 +58,6 @@
         android:layout_height="219dp"
         android:layout_gravity="center" />
 
-
     <FrameLayout
         android:layout_width="423dp"
         android:layout_height="match_parent">
@@ -81,7 +80,7 @@
                 android:layout_height="80dp"
                 android:layout_gravity="bottom"
                 app:srcCompat="@drawable/homepage"
-                android:id="@+id/btnInfoHome"/>
+                android:id="@+id/btnHomeFromAboutUs"/>
 
             <ImageView
                 android:id="@+id/btnInfoShop"
