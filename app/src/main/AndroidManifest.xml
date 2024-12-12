@@ -22,8 +22,8 @@
         <activity
             android:name=".MainActivity"/>
         <activity android:name=".RegisterActivity"/>
-        <activity android:name=".StoreLocation"/>
         <activity android:name=".ProfileActivity"/>
+        <activity android:name=".AboutUsActivity"/>
         <activity android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
