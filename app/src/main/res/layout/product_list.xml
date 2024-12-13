@@ -7,12 +7,14 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/productImg"/>
+        android:id="@+id/productImg"
+        android:layout_margin="8dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +31,8 @@
             android:text="Product's Price"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="#C97D01"/>
+            android:textColor="#C97D01"
+            android:layout_marginTop="5dp"/>
 
 
     </LinearLayout>
