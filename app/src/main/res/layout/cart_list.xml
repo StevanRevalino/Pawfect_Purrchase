@@ -47,7 +47,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/min_qty_button"
-                android:id="@+id/minQuantityButton"/>
+                android:id="@+id/minQuantityButton"
+                android:focusable="true"
+                android:clickable="true"
+                />
 
             <FrameLayout
                 android:layout_width="wrap_content"
@@ -75,7 +78,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/plusQuantityButton"
-                android:src="@drawable/add_qty_button"/>
+                android:src="@drawable/add_qty_button"
+                android:focusable="true"
+                android:clickable="true"
+                />
 
         </LinearLayout>
 

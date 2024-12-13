@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView equipmentBtn, foodBtn, toysBtn;
     ImageView homeInfo;
     ImageView userProfile;
+    ImageView btnShoppingCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,5 +84,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnShoppingCart = findViewById(R.id.btnHomeShop);
+        btnShoppingCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ShoppingCartTabLayout.class);
+                startActivity(intent);
+            }
+        });
     }
 }

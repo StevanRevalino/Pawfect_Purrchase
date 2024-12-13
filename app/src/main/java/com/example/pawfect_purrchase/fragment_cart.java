@@ -1,5 +1,7 @@
 package com.example.pawfect_purrchase;
 
+import android.annotation.SuppressLint;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,10 +65,62 @@ public class fragment_cart extends Fragment {
         }
     }
 
+    List<ProductModel> productList;
+    ListView listView;
+    TextView totalPriceTextView;
+    DatabaseHelper databaseHelper;
+    ImageView btnCheckOut;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false);
+        View view = inflater.inflate(R.layout.fragment_cart, container, false);
+
+        listView = view.findViewById(R.id.listViewCart);
+        totalPriceTextView = view.findViewById(R.id.cartTotalPrice);
+
+        // Initialize DatabaseHelper
+        databaseHelper = new DatabaseHelper(getContext());
+
+        // Fetch all cart data from the database
+        productList = new ArrayList<>();
+        Cursor cursor = databaseHelper.getAllDataCart();
+
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                int image = cursor.getInt(cursor.getColumnIndexOrThrow("IMAGE"));
+                String name = cursor.getString(cursor.getColumnIndexOrThrow("NAME"));
+                String price = cursor.getString(cursor.getColumnIndexOrThrow("PRICE"));
+                String description = cursor.getString(cursor.getColumnIndexOrThrow("DESCRIPTION"));
+
+                productList.add(new ProductModel(image, name, price, description));
+            }
+            cursor.close();
+        }
+
+        // Set the adapter for the ListView
+        CartItemAdapter adapter = new CartItemAdapter(requireContext(), productList, totalPriceTextView);
+        listView.setAdapter(adapter);
+
+        // Update total price after setting data
+        adapter.updateTotalPrice();
+
+        btnCheckOut = view.findViewById(R.id.cartCheckOutBtn);
+        btnCheckOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseHelper.deleteAllDataCart();
+                productList.clear();
+                adapter.notifyDataSetChanged();
+
+                totalPriceTextView.setText("Rp 0");
+
+                Toast.makeText(getContext(), "Checkout successful!.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return view;
     }
+
 }
