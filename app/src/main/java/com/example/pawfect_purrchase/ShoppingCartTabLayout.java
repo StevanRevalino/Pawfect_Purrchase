@@ -35,6 +35,12 @@ public class ShoppingCartTabLayout extends AppCompatActivity {
             }
         });
 
+        // Muat fragment default (fragment_cart)
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentView, new fragment_cart());
+        fragmentTransaction.commit();
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

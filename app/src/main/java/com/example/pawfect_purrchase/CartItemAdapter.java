@@ -77,21 +77,25 @@ public class CartItemAdapter extends ArrayAdapter<ProductModel> {
 
         // Ambil kuantitas lokal untuk produk ini
         int quantity = productQuantities.get(position);
-        quantityNum.setText("Qty: " + quantity);
+        quantityNum.setText(String.valueOf(quantity));
 
 
         // Tambah/kurangi kuantitas
         minQuantityButton.setOnClickListener(v -> {
-            if (quantity > 1) {
-                productQuantities.put(position, quantity - 1);
-                quantityNum.setText("Qty: " + (quantity - 1));
+            int currentQuantity = productQuantities.getOrDefault(position, 1); // Dapatkan kuantitas terbaru
+            if (currentQuantity > 1) {
+                int newQuantity = currentQuantity - 1;
+                productQuantities.put(position, newQuantity);
+                quantityNum.setText(String.valueOf(newQuantity)); // Tampilkan kuantitas terbaru
                 updateTotalPrice();
             }
         });
 
         plusQuantityButton.setOnClickListener(v -> {
-            productQuantities.put(position, quantity + 1);
-            quantityNum.setText("Qty: " + (quantity + 1));
+            int currentQuantity = productQuantities.getOrDefault(position, 1); // Dapatkan kuantitas terbaru
+            int newQuantity = currentQuantity + 1;
+            productQuantities.put(position, newQuantity);
+            quantityNum.setText(String.valueOf(newQuantity)); // Tampilkan kuantitas terbaru
             updateTotalPrice();
         });
 
@@ -108,6 +112,6 @@ public class CartItemAdapter extends ArrayAdapter<ProductModel> {
             double parsedPrice = Double.parseDouble(product.getPrice().replace("Rp", "").replace(",", ""));
             totalPrice += quantity * parsedPrice;
         }
-        totalPriceTextView.setText("Total: Rp " + totalPrice);
+        totalPriceTextView.setText("Rp " + totalPrice);
     }
 }
