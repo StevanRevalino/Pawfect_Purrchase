@@ -15,7 +15,8 @@ public class LoginActivity extends AppCompatActivity {
 
     DatabaseHelper dbHelper;
     EditText edtLoginEmail, edtLoginPassword;
-    Button btnLogin,btnRegisterFromLogin;
+    Button btnLogin;
+    ImageView btnRegisterFromLogin;
     ImageView btnTogglePassword;
     boolean isPasswordVisible = false;
 
