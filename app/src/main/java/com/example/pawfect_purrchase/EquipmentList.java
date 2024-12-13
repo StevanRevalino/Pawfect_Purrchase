@@ -1,10 +1,13 @@
 package com.example.pawfect_purrchase;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,5 +41,21 @@ public class EquipmentList extends AppCompatActivity {
                 finish();
             }
         });
+
+        listDataEquipment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                ProductModel selectedProduct = equipmentList.get(i);
+
+                // Kirim data produk ke activity ProductDetailActivity
+                Intent intent = new Intent(EquipmentList.this, ProductDetailActivity.class);
+                intent.putExtra("image", selectedProduct.getImage());
+                intent.putExtra("name", selectedProduct.getName());
+                intent.putExtra("price", selectedProduct.getPrice());
+                intent.putExtra("description", selectedProduct.getDescription());
+                startActivity(intent);
+            }
+        });
+
     }
 }
