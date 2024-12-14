@@ -3,14 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment_history"
     android:background="#FFEFD9">
 
     <ListView
-        android:id="@+id/listViewCart"
+        android:id="@+id/listViewTransaction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="#994E20"
         android:dividerHeight="1dp"/>
 
+    <Button
+        android:id="@+id/btnDeleteAllHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:text="Remove All History"
+        android:backgroundTint="#994E20"
+        android:textColor="#FFEFD9"
+        android:layout_marginBottom="18dp"/>
 </FrameLayout>

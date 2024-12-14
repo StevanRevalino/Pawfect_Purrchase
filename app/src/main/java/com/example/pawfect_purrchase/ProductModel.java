@@ -6,6 +6,8 @@ public class ProductModel {
     private String price;
     private String description;
 
+    private int quantity;
+    private double totalPrice;
     public ProductModel(int image, String name, String price, String description) {
         this.image = image;
         this.name = name;

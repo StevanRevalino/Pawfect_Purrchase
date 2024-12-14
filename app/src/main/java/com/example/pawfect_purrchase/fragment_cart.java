@@ -110,6 +110,15 @@ public class fragment_cart extends Fragment {
         btnCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String totalSpent = totalPriceTextView.getText().toString();
+
+                boolean isAdded = databaseHelper.addTransaction(totalSpent);
+                if (isAdded) {
+                    Toast.makeText(getContext(), "Checkout successful! Transaction saved to history.", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getContext(), "Failed to save transaction.", Toast.LENGTH_SHORT).show();
+                }
+
                 databaseHelper.deleteAllDataCart();
                 productList.clear();
                 adapter.notifyDataSetChanged();
