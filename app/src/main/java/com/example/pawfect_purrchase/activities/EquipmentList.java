@@ -16,6 +16,7 @@ import com.example.pawfect_purrchase.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class EquipmentList extends AppCompatActivity {
     List<ProductModel> equipmentList;
@@ -30,7 +31,10 @@ public class EquipmentList extends AppCompatActivity {
         listDataEquipment = findViewById(R.id.listViewEquipProduct);
         equipmentList = new ArrayList<>();
 
-        ProductModel equipment1 =new ProductModel(R.drawable.equipmentbutton,"equipment1","Rp 2000","desc1",4.5);
+        Random random = new Random();
+        double randomRating = 4.5 + (5.0 - 4.5) * random.nextDouble();
+
+        ProductModel equipment1 =new ProductModel(R.drawable.equipmentbutton,"equipment1","Rp 2000","desc1",randomRating);
         equipmentList.add(equipment1);
 
         ContentAdapter adapter = new ContentAdapter(getApplicationContext(),equipmentList);

@@ -45,24 +45,15 @@ public class ProductDetailActivity extends AppCompatActivity {
         String description = intent.getStringExtra("description");
         double rating = intent.getDoubleExtra("rating", 0.0);
 
-        if (image == 0 || name == null || price == null || description == null) {
-            Log.e("ProductDetailActivity", "Received invalid data");
-        }
-
         // Set data ke views
         productImage.setImageResource(image);
         productName.setText(name);
         productPrice.setText(price);
         productDescription.setText(description);
+        productRating.setText(String.format("%.1f", rating));
 
         // Inisialisasi DatabaseHelper
         databaseHelper = new DatabaseHelper(this);
-
-
-        Random random = new Random();
-        double randomRating = 4.5 + (5.0 - 4.5) * random.nextDouble();
-
-        productRating.setText(String.format("%.1f", randomRating));
 
         addToCartBtn = findViewById(R.id.productDetailAddToCartBtn);
         addToCartBtn.setOnClickListener(new View.OnClickListener() {
