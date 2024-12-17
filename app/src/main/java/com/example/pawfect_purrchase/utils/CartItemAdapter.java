@@ -126,8 +126,6 @@
 
         }
 
-
-
         // Update the total price of all items in the cart
         public void updateTotalPrice() {
             double totalPrice = 0;

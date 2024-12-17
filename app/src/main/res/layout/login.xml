@@ -93,22 +93,6 @@
                 app:srcCompat="@drawable/register_"
                 android:paddingBottom="2dp" />
         </LinearLayout>
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="20dp"-->
-<!--            android:text="Don't have an account?"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textSize="15dp"/>-->
-<!--                    -->
-<!--        <Button-->
-<!--            android:id="@+id/btnRegisterFromLogin"-->
-<!--            android:layout_width="226dp"-->
-<!--            android:layout_height="61dp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:text="Register"-->
-<!--            android:backgroundTint="#C97D01"-->
-<!--            android:textColor="#FFEFD9"/>-->
 
         <ImageView
             android:layout_width="match_parent"

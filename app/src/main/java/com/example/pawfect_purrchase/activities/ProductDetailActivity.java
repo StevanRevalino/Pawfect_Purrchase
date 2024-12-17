@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.pawfect_purrchase.utils.DatabaseHelper;
 import com.example.pawfect_purrchase.R;
 
+import java.util.Random;
+
 public class ProductDetailActivity extends AppCompatActivity {
 
     ImageView productImage;
@@ -21,7 +23,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     ImageView btnBack;
     ImageView addToCartBtn;
     DatabaseHelper databaseHelper;
-    int quantity = 1;
+    TextView productRating;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         productName = findViewById(R.id.detailProductTitle);
         productPrice = findViewById(R.id.productDetailPrice);
         productDescription = findViewById(R.id.productDetailDesc);
+        productRating = findViewById(R.id.ratingNum);
 
         // Ambil data yang dikirimkan dari activity sebelumnya
         Intent intent = getIntent();
@@ -40,16 +43,14 @@ public class ProductDetailActivity extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         String price = intent.getStringExtra("price");
         String description = intent.getStringExtra("description");
-
-        if (image == 0 || name == null || price == null || description == null) {
-            Log.e("ProductDetailActivity", "Received invalid data");
-        }
+        double rating = intent.getDoubleExtra("rating", 0.0);
 
         // Set data ke views
         productImage.setImageResource(image);
         productName.setText(name);
         productPrice.setText(price);
         productDescription.setText(description);
+        productRating.setText(String.format("%.1f", rating));
 
         // Inisialisasi DatabaseHelper
         databaseHelper = new DatabaseHelper(this);

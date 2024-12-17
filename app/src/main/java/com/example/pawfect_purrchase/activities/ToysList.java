@@ -16,6 +16,7 @@ import com.example.pawfect_purrchase.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ToysList extends AppCompatActivity {
     List<ProductModel> toyList;
@@ -30,7 +31,10 @@ public class ToysList extends AppCompatActivity {
         listDataToy = findViewById(R.id.listViewToysProduct);
         toyList = new ArrayList<>();
 
-        ProductModel toy1 =new ProductModel(R.drawable.toysbutton,"toy1","Rp 2000","desc1");
+        Random random = new Random();
+        double randomRating = 4.5 + (5.0 - 4.5) * random.nextDouble();
+
+        ProductModel toy1 =new ProductModel(R.drawable.toysbutton,"toy1","Rp 2000","desc1",randomRating);
         toyList.add(toy1);
 
         ContentAdapter adapter = new ContentAdapter(getApplicationContext(),toyList);
@@ -55,6 +59,8 @@ public class ToysList extends AppCompatActivity {
                 intent.putExtra("name", selectedProduct.getName());
                 intent.putExtra("price", selectedProduct.getPrice());
                 intent.putExtra("description", selectedProduct.getDescription());
+                intent.putExtra("rating", selectedProduct.getRating());
+
                 startActivity(intent);
             }
         });

@@ -31,7 +31,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String query2 =
                 "CREATE TABLE IF NOT EXISTS " +
                 TABLE_CART +
-                " (IMAGE INT, NAME TEXT, PRICE TEXT, DESCRIPTION TEXT);";
+                " (IMAGE INT, NAME TEXT, PRICE TEXT, DESCRIPTION TEXT, RATING REAL);";
 
         db.execSQL(query2);
 

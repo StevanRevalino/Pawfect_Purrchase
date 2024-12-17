@@ -97,7 +97,7 @@ public class fragment_cart extends Fragment {
                 String price = cursor.getString(cursor.getColumnIndexOrThrow("PRICE"));
                 String description = cursor.getString(cursor.getColumnIndexOrThrow("DESCRIPTION"));
 
-                productList.add(new ProductModel(image, name, price, description));
+                productList.add(new ProductModel(image, name, price, description, 0));
             }
             cursor.close();
         }
