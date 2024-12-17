@@ -8,9 +8,10 @@
 
     <ImageView
         android:layout_width="139dp"
-        android:layout_height="205dp"
+        android:layout_height="139dp"
         android:layout_gravity="center"
-        app:srcCompat="@drawable/infobutton" />
+        app:srcCompat="@drawable/infobutton"
+        android:layout_marginTop="20dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +28,8 @@
         android:fontFamily="sans-serif"
         android:text="At Pawfect Purrchase, we believe every pet deserves the best. From nutritious food to fun toys and comfy accessories, we’re here to make shopping for your furry friends easy and enjoyable. Your pet’s happiness is our priority—because they’re family too!"
         android:textAlignment="center"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:gravity="center"/>
 
     <!--    Logout sm graphics-->
     <LinearLayout

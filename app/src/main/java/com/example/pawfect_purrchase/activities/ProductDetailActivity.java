@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.pawfect_purrchase.utils.DatabaseHelper;
 import com.example.pawfect_purrchase.R;
 
+import java.util.Random;
+
 public class ProductDetailActivity extends AppCompatActivity {
 
     ImageView productImage;
@@ -21,7 +23,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     ImageView btnBack;
     ImageView addToCartBtn;
     DatabaseHelper databaseHelper;
-    int quantity = 1;
+    TextView rating;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,6 +55,13 @@ public class ProductDetailActivity extends AppCompatActivity {
 
         // Inisialisasi DatabaseHelper
         databaseHelper = new DatabaseHelper(this);
+
+        rating = findViewById(R.id.ratingNum);
+
+        Random random = new Random();
+        double randomRating = 4.5 + (5.0 - 4.5) * random.nextDouble();
+
+        rating.setText(String.format("%.1f", randomRating));
 
         addToCartBtn = findViewById(R.id.productDetailAddToCartBtn);
         addToCartBtn.setOnClickListener(new View.OnClickListener() {
