@@ -1,4 +1,4 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,29 +10,33 @@ import android.widget.ListView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.pawfect_purrchase.utils.ContentAdapter;
+import com.example.pawfect_purrchase.models.ProductModel;
+import com.example.pawfect_purrchase.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class ToysList extends AppCompatActivity {
-    List<ProductModel> toyList;
-    ListView listDataToy;
+public class EquipmentList extends AppCompatActivity {
+    List<ProductModel> equipmentList;
+    ListView listDataEquipment;
     Button btnBack;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.product_list_view_toys);
+        setContentView(R.layout.product_list_view_equipment);
 
-        listDataToy = findViewById(R.id.listViewToysProduct);
-        toyList = new ArrayList<>();
+        listDataEquipment = findViewById(R.id.listViewEquipProduct);
+        equipmentList = new ArrayList<>();
 
-        ProductModel toy1 =new ProductModel(R.drawable.toysbutton,"toy1","Rp 2000","desc1");
-        toyList.add(toy1);
+        ProductModel equipment1 =new ProductModel(R.drawable.equipmentbutton,"equipment1","Rp 2000","desc1");
+        equipmentList.add(equipment1);
 
-        ContentAdapter adapter = new ContentAdapter(getApplicationContext(),toyList);
-        listDataToy.setAdapter(adapter);
+        ContentAdapter adapter = new ContentAdapter(getApplicationContext(),equipmentList);
+        listDataEquipment.setAdapter(adapter);
 
-        btnBack = findViewById(R.id.btnBackToys);
+        btnBack = findViewById(R.id.btnBackEquip);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,13 +44,13 @@ public class ToysList extends AppCompatActivity {
             }
         });
 
-        listDataToy.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listDataEquipment.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ProductModel selectedProduct = toyList.get(i);
+                ProductModel selectedProduct = equipmentList.get(i);
 
                 // Kirim data produk ke activity ProductDetailActivity
-                Intent intent = new Intent(ToysList.this, ProductDetailActivity.class);
+                Intent intent = new Intent(EquipmentList.this, ProductDetailActivity.class);
                 intent.putExtra("image", selectedProduct.getImage());
                 intent.putExtra("name", selectedProduct.getName());
                 intent.putExtra("price", selectedProduct.getPrice());

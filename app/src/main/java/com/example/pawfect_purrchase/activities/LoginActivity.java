@@ -1,4 +1,4 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.pawfect_purrchase.utils.DatabaseHelper;
+import com.example.pawfect_purrchase.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,6 +44,9 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(email.isEmpty() || password.isEmpty()){
                     Toast.makeText(LoginActivity.this, "Please fill in all fields!", Toast.LENGTH_SHORT).show();
+                    return;
+                }else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    Toast.makeText(LoginActivity.this, "Email must include '@' and ends with '.com'", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

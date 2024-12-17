@@ -83,6 +83,15 @@
                 android:clickable="true"
                 />
 
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/trashcan"
+                android:id="@+id/DeleteBtn"
+                android:focusable="true"
+                android:clickable="true" />
+
         </LinearLayout>
 
 

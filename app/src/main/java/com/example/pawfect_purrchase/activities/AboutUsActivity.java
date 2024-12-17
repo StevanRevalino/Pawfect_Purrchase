@@ -1,15 +1,15 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.pawfect_purrchase.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -19,7 +19,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class AboutUsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    ImageView btnHomeFromaboutUs;
+    ImageView btnHomeFromAboutUs;
+    ImageView btnCartFromAboutUs;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,11 +30,20 @@ public class AboutUsActivity extends AppCompatActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.id_map);
         mapFragment.getMapAsync(this);
 
-        btnHomeFromaboutUs = findViewById(R.id.btnHomeFromAboutUs);
-        btnHomeFromaboutUs.setOnClickListener(new View.OnClickListener() {
+        btnHomeFromAboutUs = findViewById(R.id.btnHomeFromAboutUs);
+        btnHomeFromAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        btnCartFromAboutUs = findViewById(R.id.btnInfoShop);
+        btnCartFromAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AboutUsActivity.this, ShoppingCartTabLayout.class);
+                startActivity(intent);
             }
         });
     }

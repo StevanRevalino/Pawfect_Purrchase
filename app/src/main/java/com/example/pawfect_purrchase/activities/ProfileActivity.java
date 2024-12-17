@@ -1,4 +1,4 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.pawfect_purrchase.R;
+
 public class ProfileActivity extends AppCompatActivity {
 
     ImageView buttonBack, buttonLogOut;
@@ -17,8 +19,6 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile);
-
         setContentView(R.layout.profile);
 
         buttonBack = findViewById(R.id.btnBackToHome);
@@ -41,11 +41,10 @@ public class ProfileActivity extends AppCompatActivity {
         emptyText = findViewById(R.id.emptyText);
         // Ambil email dari Intent
         String email = getIntent().getStringExtra("userEmail");
-        if (email != null) {
-            // Pisahkan nama dari email
+        if (email != null && email.contains("@")) {
             String name = email.split("@")[0];
-            // Tampilkan nama di TextViews
             emptyText.setText(name);
         }
+
     }
 }

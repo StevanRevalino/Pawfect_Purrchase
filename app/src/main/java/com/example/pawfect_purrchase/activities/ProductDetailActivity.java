@@ -1,4 +1,4 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.pawfect_purrchase.utils.DatabaseHelper;
+import com.example.pawfect_purrchase.R;
 
 public class ProductDetailActivity extends AppCompatActivity {
 
