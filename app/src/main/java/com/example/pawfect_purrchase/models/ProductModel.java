@@ -1,4 +1,4 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.models;
 
 public class ProductModel {
     private int image;

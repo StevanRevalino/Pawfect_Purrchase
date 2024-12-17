@@ -1,16 +1,20 @@
-    package com.example.pawfect_purrchase;
+    package com.example.pawfect_purrchase.utils;
 
     import android.content.Context;
     import android.view.LayoutInflater;
     import android.view.View;
     import android.view.ViewGroup;
     import android.widget.ArrayAdapter;
+    import android.widget.Button;
     import android.widget.ImageView;
     import android.widget.TextView;
 
     import androidx.annotation.NonNull;
     import androidx.annotation.Nullable;
     import androidx.appcompat.widget.AppCompatImageView;
+
+    import com.example.pawfect_purrchase.models.ProductModel;
+    import com.example.pawfect_purrchase.R;
 
     import java.util.HashMap;
     import java.util.List;
@@ -74,6 +78,8 @@
             AppCompatImageView minQuantityButton = convertView.findViewById(R.id.minQuantityButton);
             AppCompatImageView plusQuantityButton = convertView.findViewById(R.id.plusQuantityButton);
 
+            ImageView deleteBtn = convertView.findViewById(R.id.DeleteBtn);
+
             // Display product data
             imageView.setImageResource(product.getImage());
             nameTextView.setText(product.getName());
@@ -102,8 +108,25 @@
                 updateTotalPrice();
             });
 
+            deleteBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    DatabaseHelper dbHelper = new DatabaseHelper(context);
+                    boolean isDeleted = dbHelper.deleteCartItem(product.getName());
+
+                    if (isDeleted) {
+                        productList.remove(position); // Remove item from the list
+                        notifyDataSetChanged(); // Notify adapter to refresh the list
+                        updateTotalPrice(); // Update the total price
+                    }
+                }
+            });
+
             return convertView;
+
         }
+
+
 
         // Update the total price of all items in the cart
         public void updateTotalPrice() {

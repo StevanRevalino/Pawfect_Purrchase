@@ -1,6 +1,6 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.activities;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.pawfect_purrchase.R;
+import com.example.pawfect_purrchase.fragments.fragment_cart;
+import com.example.pawfect_purrchase.fragments.fragment_history;
 import com.google.android.material.tabs.TabLayout;
 
 public class ShoppingCartTabLayout extends AppCompatActivity {
@@ -31,7 +34,8 @@ public class ShoppingCartTabLayout extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(ShoppingCartTabLayout.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 

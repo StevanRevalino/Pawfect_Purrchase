@@ -1,4 +1,4 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,10 @@ import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.pawfect_purrchase.utils.ContentAdapter;
+import com.example.pawfect_purrchase.models.ProductModel;
+import com.example.pawfect_purrchase.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,12 +1,10 @@
-package com.example.pawfect_purrchase;
+package com.example.pawfect_purrchase.utils;
 
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -17,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String TABLE_HISTORY = "History_Table";
 
     public DatabaseHelper(@Nullable Context context) {
-        super(context, "pawpur.db", null, 7);
+        super(context, "pawpur.db", null, 1);
     }
 
     @Override
@@ -54,11 +52,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String query2 = "DROP TABLE IF EXISTS " + TABLE_CART;
         db.execSQL(query2);
 
-        if (oldVersion < 7) {
-            // Jika perlu memperbarui kolom atau tabel
-            String query3 = "ALTER TABLE " + TABLE_HISTORY + " ADD COLUMN TRANSACTIONCOUNT TEXT;";
-            db.execSQL(query3);
-        }
+        // Jika perlu memperbarui kolom atau tabel
+        String query3 = "DROP TABLE IF EXISTS " + TABLE_HISTORY;
+        db.execSQL(query3);
+
 
         onCreate(db);
     }
@@ -99,6 +96,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         int rowDeleted = db.delete(TABLE_CART,null,null);
         return rowDeleted > 0;
     }
+
+    public boolean deleteCartItem(String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int rowsDeleted = db.delete(TABLE_CART, "NAME = ?", new String[]{name});
+        return rowsDeleted > 0;
+    }
+
 
     public boolean checkEmail(String email){
         SQLiteDatabase db = this.getWritableDatabase();
