@@ -30,7 +30,7 @@ public class EquipmentList extends AppCompatActivity {
         listDataEquipment = findViewById(R.id.listViewEquipProduct);
         equipmentList = new ArrayList<>();
 
-        ProductModel equipment1 =new ProductModel(R.drawable.equipmentbutton,"equipment1","Rp 2000","desc1");
+        ProductModel equipment1 =new ProductModel(R.drawable.equipmentbutton,"equipment1","Rp 2000","desc1",4.5);
         equipmentList.add(equipment1);
 
         ContentAdapter adapter = new ContentAdapter(getApplicationContext(),equipmentList);
@@ -55,6 +55,8 @@ public class EquipmentList extends AppCompatActivity {
                 intent.putExtra("name", selectedProduct.getName());
                 intent.putExtra("price", selectedProduct.getPrice());
                 intent.putExtra("description", selectedProduct.getDescription());
+                intent.putExtra("rating", selectedProduct.getRating());
+
                 startActivity(intent);
             }
         });

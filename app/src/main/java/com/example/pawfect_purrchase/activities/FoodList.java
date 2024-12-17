@@ -30,7 +30,7 @@ public class FoodList extends AppCompatActivity {
         listDataFood = findViewById(R.id.listViewFoodProduct);
         foodList = new ArrayList<>();
 
-        ProductModel food1 =new ProductModel(R.drawable.foodbutton,"food1","Rp 2000","desc1");
+        ProductModel food1 =new ProductModel(R.drawable.foodbutton,"food1","Rp 2000","desc1",5);
         foodList.add(food1);
 
         ContentAdapter adapter = new ContentAdapter(getApplicationContext(),foodList);
@@ -55,6 +55,8 @@ public class FoodList extends AppCompatActivity {
                 intent.putExtra("name", selectedProduct.getName());
                 intent.putExtra("price", selectedProduct.getPrice());
                 intent.putExtra("description", selectedProduct.getDescription());
+                intent.putExtra("rating", selectedProduct.getRating());
+
                 startActivity(intent);
             }
         });

@@ -23,7 +23,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     ImageView btnBack;
     ImageView addToCartBtn;
     DatabaseHelper databaseHelper;
-    TextView rating;
+    TextView productRating;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         productName = findViewById(R.id.detailProductTitle);
         productPrice = findViewById(R.id.productDetailPrice);
         productDescription = findViewById(R.id.productDetailDesc);
+        productRating = findViewById(R.id.ratingNum);
 
         // Ambil data yang dikirimkan dari activity sebelumnya
         Intent intent = getIntent();
@@ -42,6 +43,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         String price = intent.getStringExtra("price");
         String description = intent.getStringExtra("description");
+        double rating = intent.getDoubleExtra("rating", 0.0);
 
         if (image == 0 || name == null || price == null || description == null) {
             Log.e("ProductDetailActivity", "Received invalid data");
@@ -56,12 +58,11 @@ public class ProductDetailActivity extends AppCompatActivity {
         // Inisialisasi DatabaseHelper
         databaseHelper = new DatabaseHelper(this);
 
-        rating = findViewById(R.id.ratingNum);
 
         Random random = new Random();
         double randomRating = 4.5 + (5.0 - 4.5) * random.nextDouble();
 
-        rating.setText(String.format("%.1f", randomRating));
+        productRating.setText(String.format("%.1f", randomRating));
 
         addToCartBtn = findViewById(R.id.productDetailAddToCartBtn);
         addToCartBtn.setOnClickListener(new View.OnClickListener() {

@@ -30,7 +30,7 @@ public class ToysList extends AppCompatActivity {
         listDataToy = findViewById(R.id.listViewToysProduct);
         toyList = new ArrayList<>();
 
-        ProductModel toy1 =new ProductModel(R.drawable.toysbutton,"toy1","Rp 2000","desc1");
+        ProductModel toy1 =new ProductModel(R.drawable.toysbutton,"toy1","Rp 2000","desc1",5);
         toyList.add(toy1);
 
         ContentAdapter adapter = new ContentAdapter(getApplicationContext(),toyList);
@@ -55,6 +55,8 @@ public class ToysList extends AppCompatActivity {
                 intent.putExtra("name", selectedProduct.getName());
                 intent.putExtra("price", selectedProduct.getPrice());
                 intent.putExtra("description", selectedProduct.getDescription());
+                intent.putExtra("rating", selectedProduct.getRating());
+
                 startActivity(intent);
             }
         });
