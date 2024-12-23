@@ -18,11 +18,11 @@
         android:layout_margin="8dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/cartProductName"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
             android:text="Product's Name"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/cartProductPrice"
             android:text="Product's Price"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="#C97D01"
             android:layout_marginTop="5dp"/>
