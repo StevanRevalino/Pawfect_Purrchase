@@ -1,5 +1,6 @@
 package com.example.pawfect_purrchase.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -23,6 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText edtRegistEmail, edtRegistPassword, edtRegistConfirmPassword;
     Button btnRegister;
 
+    Button backToLogin;
     boolean isPasswordVisible = false;
     boolean isConfirmPasswordVisible = false;
 
@@ -38,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         edtRegistConfirmPassword = findViewById(R.id.edtConfirmPassword);
         ImageView btnTogglePasswordRegister = findViewById(R.id.btnTogglePasswordRegister);
         ImageView btnToggleConfirmPassword = findViewById(R.id.btnToggleConfirmPassword);
+
 
         btnRegister = findViewById(R.id.btnRegister);
 
@@ -103,7 +106,17 @@ public class RegisterActivity extends AppCompatActivity {
             isConfirmPasswordVisible = !isConfirmPasswordVisible;
             edtRegistConfirmPassword.setSelection(edtRegistConfirmPassword.length());
         });
+
+        backToLogin = findViewById(R.id.btnBackToLogin);
+        backToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
     // Fungsi untuk memvalidasi format email
     private boolean isValidEmail(String email) {

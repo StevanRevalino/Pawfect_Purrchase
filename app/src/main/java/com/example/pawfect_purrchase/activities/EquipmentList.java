@@ -32,21 +32,26 @@ public class EquipmentList extends AppCompatActivity {
         equipmentList = new ArrayList<>();
 
         Random random = new Random();
-        double randomRating = 4.5 + (5.0 - 4.5) * random.nextDouble();
 
-        ProductModel equipment1 =new ProductModel(R.drawable.pethouse,"Big Fancy Grey Pet House","Rp 600000","Keep your furry friends out of rain with this fancy little shelter. SIZE 100x100cm",randomRating);
+        double randomRating1 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating2 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating3 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating4 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating5 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+
+        ProductModel equipment1 =new ProductModel(R.drawable.pethouse,"Big Fancy Grey Pet House","Rp 600000","Keep your furry friends out of rain with this fancy little shelter. SIZE 100x100cm",randomRating1);
         equipmentList.add(equipment1);
 
-        ProductModel equipment2 =new ProductModel(R.drawable.largecattowerforindoorcats,"Large Cat Tower for Indoor Cats","Rp 1100000","Start building your kitty empire with us! With a unique structure and intricate design, your felines are guaranteed to love their new home. HEIGHT 170CM",randomRating);
+        ProductModel equipment2 =new ProductModel(R.drawable.largecattowerforindoorcats,"Large Cat Tower for Indoor Cats","Rp 1100000","Start building your kitty empire with us! With a unique structure and intricate design, your felines are guaranteed to love their new home. HEIGHT 170CM",randomRating2);
         equipmentList.add(equipment2);
 
-        ProductModel equipment3 =new ProductModel(R.drawable.harnessforyourdogsandcats,"Harness for Your Dogs and Cats","Rp 40000","A walk with these bad boys will guarantee a lot of tugging and pulling. But hey, it’s certainly worth it!",randomRating);
+        ProductModel equipment3 =new ProductModel(R.drawable.harnessforyourdogsandcats,"Harness for Your Dogs and Cats","Rp 40000","A walk with these bad boys will guarantee a lot of tugging and pulling. But hey, it’s certainly worth it!",randomRating3);
         equipmentList.add(equipment3);
 
-        ProductModel equipment4 =new ProductModel(R.drawable.petprotectioncone,"Pet Protection Cone","Rp 20000","Keep your pets from harming others and themselves with the pet cone.",randomRating);
+        ProductModel equipment4 =new ProductModel(R.drawable.petprotectioncone,"Pet Protection Cone","Rp 20000","Keep your pets from harming others and themselves with the pet cone.",randomRating4);
         equipmentList.add(equipment4);
 
-        ProductModel equipment5 =new ProductModel(R.drawable.petgroomingkit,"Pet Grooming Kit","Rp 550000","Ensure your pet’s hygiene with these high quality tools. Pets often reflect their owners!",randomRating);
+        ProductModel equipment5 =new ProductModel(R.drawable.petgroomingkit,"Pet Grooming Kit","Rp 550000","Ensure your pet’s hygiene with these high quality tools. Pets often reflect their owners!",randomRating5);
         equipmentList.add(equipment5);
 
         ContentAdapter adapter = new ContentAdapter(getApplicationContext(),equipmentList);

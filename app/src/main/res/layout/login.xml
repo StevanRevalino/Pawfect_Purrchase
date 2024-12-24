@@ -63,6 +63,7 @@
             android:layout_width="226dp"
             android:layout_height="64dp"
             android:layout_gravity="center"
+            android:textSize="20dp"
             android:text="Log in"
             android:backgroundTint="#C97D01"
             android:textColor="#FFEFD9"/>
