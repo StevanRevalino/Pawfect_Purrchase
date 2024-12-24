@@ -34,8 +34,20 @@ public class ToysList extends AppCompatActivity {
         Random random = new Random();
         double randomRating = 4.5 + (5.0 - 4.5) * random.nextDouble();
 
-        ProductModel toy1 =new ProductModel(R.drawable.toysbutton,"toy1","Rp 2000","desc1",randomRating);
+        ProductModel toy1 =new ProductModel(R.drawable.sausagedog,"Sausage Dog Chew Toy","Rp 25000","Got a needy dog? Look no further, get a chew buddy for your lonely fella!",randomRating);
         toyList.add(toy1);
+
+        ProductModel toy2 =new ProductModel(R.drawable.interactiveelectric,"Interactive Electric Mouse Toy","Rp 90000","This mouse will keep your cat busy while you’re handling other matters. DO NOT USE NEAR WATER!",randomRating);
+        toyList.add(toy2);
+
+        ProductModel toy3 =new ProductModel(R.drawable.minimouse,"Mini Fluffy Mouse Toy","Rp 10000","Your cat will never get tired of this one. Keep them busy with a cute mouse! TREAT WITH CARE NEAR FIRE!",randomRating);
+        toyList.add(toy3);
+
+        ProductModel toy4 =new ProductModel(R.drawable.catwalk,"Catwalk Wheel","Rp 300000","Keep your cat healthy, fit, and happy with this neverending spin! Your cat might even convince itself as a hamster…",randomRating);
+        toyList.add(toy4);
+
+        ProductModel toy5 =new ProductModel(R.drawable.wishbone,"Wishbone Dog Chew Toy","Rp 15000","Keep your dog's jaws on this one and they will surely never let go…",randomRating);
+        toyList.add(toy5);
 
         ContentAdapter adapter = new ContentAdapter(getApplicationContext(),toyList);
         listDataToy.setAdapter(adapter);
