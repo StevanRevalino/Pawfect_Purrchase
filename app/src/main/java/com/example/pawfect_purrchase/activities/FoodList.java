@@ -32,21 +32,25 @@ public class FoodList extends AppCompatActivity {
         foodList = new ArrayList<>();
 
         Random random = new Random();
-        double randomRating = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating1 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating2 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating3 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating4 = 4.5 + (5.0 - 4.5) * random.nextDouble();
+        double randomRating5 = 4.5 + (5.0 - 4.5) * random.nextDouble();
 
-        ProductModel food1 =new ProductModel(R.drawable.pedigree,"Pedigree Dog Food 3kg","Rp 120000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating);
+        ProductModel food1 =new ProductModel(R.drawable.pedigree,"Pedigree Dog Food 3kg","Rp 120000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating1);
         foodList.add(food1);
 
-        ProductModel food2 =new ProductModel(R.drawable.kibblesnbits,"Kibbles n Bits Dog Food 20kg","Rp 320000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating);
+        ProductModel food2 =new ProductModel(R.drawable.kibblesnbits,"Kibbles n Bits Dog Food 20kg","Rp 320000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating2);
         foodList.add(food2);
 
-        ProductModel food3 =new ProductModel(R.drawable.meocannedfood,"Me-O Canned Wet Cat Food 400g","Rp 25000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating);
+        ProductModel food3 =new ProductModel(R.drawable.meocannedfood,"Me-O Canned Wet Cat Food 400g","Rp 25000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating3);
         foodList.add(food3);
 
-        ProductModel food4 =new ProductModel(R.drawable.pyramidhill,"Pyramid Hill Canned Dog Food 400g","Rp 32000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating);
+        ProductModel food4 =new ProductModel(R.drawable.pyramidhill,"Pyramid Hill Canned Dog Food 400g","Rp 32000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating4);
         foodList.add(food4);
 
-        ProductModel food5 =new ProductModel(R.drawable.swissenergy,"Swiss Energy Pets Pet Food 5kg","Rp 40000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating);
+        ProductModel food5 =new ProductModel(R.drawable.swissenergy,"Swiss Energy Pets Pet Food 5kg","Rp 40000","Made with natural ingredients, this pack has all the nutritional needs of your pet!",randomRating5);
         foodList.add(food5);
 
         ContentAdapter adapter = new ContentAdapter(getApplicationContext(),foodList);
