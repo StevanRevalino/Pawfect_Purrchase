@@ -19,6 +19,16 @@
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/titleEquipProduct"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#994E20"
+        app:layout_constraintTop_toBottomOf="@+id/titleEquipProduct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+
     <ListView
         android:id="@+id/listViewEquipProduct"
         android:layout_width="match_parent"
@@ -28,7 +38,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleEquipProduct"
-        app:layout_constraintBottom_toTopOf="@+id/btnBackEquip"/>
+        app:layout_constraintBottom_toTopOf="@+id/btnBackEquip"
+        android:layout_marginTop="15dp"/>
 
     <Button
         android:layout_width="wrap_content"
