@@ -11,9 +11,10 @@
     android:maxWidth="100dp">
 
     <LinearLayout
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="horizontal">
+
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -23,21 +24,23 @@
           android:layout_marginLeft="30dp"
           android:fontFamily="sans-serif-black"
           android:textColor="@color/black"/>
+
       <ImageView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           app:srcCompat="@drawable/user_profile"
           android:layout_marginTop="25dp"
-          android:layout_marginLeft="80dp"
+          android:layout_marginLeft="70dp"
           android:id="@+id/imageUserProfile"/>
+
     </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/big_banner"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,20 +91,20 @@
 
 
     <FrameLayout
-        android:layout_width="423dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_gravity="bottom|center_horizontal"
             app:srcCompat="@drawable/weird_blob"
             />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_gravity="bottom|center_horizontal"
             android:orientation="horizontal"
             android:layout_marginTop="40dp">
 
