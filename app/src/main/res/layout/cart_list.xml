@@ -23,7 +23,8 @@
             android:layout_height="37dp"
             android:text="Product's Name"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"

@@ -4,107 +4,118 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#FFEFD9">
+    android:background="#FFEFD9"
+    android:weightSum="1">
 
-    <!-- Gambar product + tombol Back -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/detailProductBackBtn"
-            app:srcCompat="@drawable/back_button_product_detail"
-            android:layout_margin="8dp"
-            android:layout_gravity="start|top"/>
-
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:id="@+id/productDetailImg"
-            android:scaleType="centerInside"
-            android:layout_gravity="center"/>
-
-    </FrameLayout>
-
-    <!-- Judul Product -->
-    <TextView
-        android:id="@+id/detailProductTitle"
-        android:layout_width="match_parent"
-        android:layout_height="84dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="10dp"
-        android:text="Product's Title"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <!-- Category (dog food, cat toy, pet equipments) + star ratings -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="12dp">
+        android:orientation="vertical"
+        android:layout_weight="0.75">
+        <!-- Gambar product + tombol Back -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailProductBackBtn"
+                app:srcCompat="@drawable/back_button_product_detail"
+                android:layout_margin="8dp"
+                android:layout_gravity="start|top"/>
 
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:id="@+id/productDetailImg"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <!-- Judul Product -->
         <TextView
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:text="Category"
-            android:id="@+id/productDetailCategory"
-            android:textSize="16sp"
-            android:layout_marginEnd="8dp"/>
+            android:id="@+id/detailProductTitle"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Product's Title"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
-        <ImageView
+        <!-- Category (dog food, cat toy, pet equipments) + star ratings -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="Category"
+                android:id="@+id/productDetailCategory"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                android:layout_marginLeft="150dp" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingNum"
+                android:text="0.0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#994E20"
+            android:layout_marginHorizontal="16dp"
+            android:alpha="0.5"/>
+
+        <!-- Detail Desc -->
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/star"
-            android:layout_marginLeft="150dp" />
+            android:text="Product Details"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/black"/>
 
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/ratingNum"
-            android:text="0.0"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="8dp"/>
-
+            android:id="@+id/productDetailDesc"
+            android:layout_width="350dp"
+            android:layout_height="159dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Ni hao ma"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#994E20"
-        android:layout_marginHorizontal="16dp"
-        android:alpha="0.5"/>
-
-    <!-- Detail Desc -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Product Details"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"/>
-
-    <TextView
-        android:id="@+id/productDetailDesc"
-        android:layout_width="350dp"
-        android:layout_height="159dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Ni hao ma"
-        android:textSize="16sp" />
 
     <!-- bagian bawah -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="110dp">
+        android:layout_weight="0.25">
 
         <ImageView
             android:layout_width="match_parent"
@@ -118,7 +129,8 @@
             android:text="Price:"
             android:textSize="16sp"
             android:layout_marginTop="35dp"
-            android:layout_marginHorizontal="16dp"/>
+            android:layout_marginHorizontal="16dp"
+            android:textColor="@color/black"/>
 
         <LinearLayout
             android:layout_width="392dp"
@@ -140,7 +152,7 @@
                 android:id="@+id/productDetailAddToCartBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="90dp"
+                android:layout_marginLeft="30dp"
                 android:src="@drawable/add_to_cart_button" />
 
         </LinearLayout>

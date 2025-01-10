@@ -22,7 +22,9 @@
             android:hint="Email..."
             android:id="@+id/edtRegistEmail"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginRight="30dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +39,9 @@
                     android:layout_height="64dp"
                     android:layout_weight="1"
                     android:hint="Password..."
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:textColorHint="#808080"
+                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:id="@+id/btnTogglePasswordRegister"
@@ -62,7 +66,9 @@
                     android:layout_height="64dp"
                     android:layout_weight="1"
                     android:hint="Confirm Password..."
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:textColorHint="#808080"
+                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:id="@+id/btnToggleConfirmPassword"
